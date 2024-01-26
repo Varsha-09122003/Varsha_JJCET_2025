@@ -45,3 +45,42 @@ image
 
 Because he managed to supply all four bases with a single supply drop, we print 1 as our answer.
 """
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'gameWithCells' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts following parameters:
+#  1. INTEGER n
+#  2. INTEGER m
+#
+
+def gameWithCells(n, m):
+   def mark_supplied_bases(grid):
+     return((n+1)//(2)*((m+_1)//2)
+    packages_in_row=math.ceil(n/2)
+    packages_in_column=math.ceil(m/2)
+    total_packages= packages_in_row* packages_in_column
+
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    first_multiple_input = input().rstrip().split()
+
+    n = int(first_multiple_input[0])
+
+    m = int(first_multiple_input[1])
+
+    result = gameWithCells(n, m)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
