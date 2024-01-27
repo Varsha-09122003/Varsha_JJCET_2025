@@ -36,3 +36,7 @@ The graphs below depict points p,q, and r for the n=2 points given as Sample Inp
 find-point-0011.png
 find-point-1122.png
 """
+
+rx = 2*qx - px
+    ry = 2*qy - py
+    return [rx, ry]
