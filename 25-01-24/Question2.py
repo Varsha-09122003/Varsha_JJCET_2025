@@ -49,3 +49,43 @@ Explanation
 Case 1: 1 route from T1 to T2, 3 routes from T2 to T3, hence only 3 routes.
 Case 2: There are 2 routes from each city to the next, hence 2 * 2 * 2 = 8.
 """
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'connectingTowns' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts following parameters:
+#  1. INTEGER n
+#  2. INTEGER_ARRAY routes
+#
+
+def connectingTowns(n, routes):
+    # Write your code here
+    r = 1
+    for i in routes:
+        r *= i
+    return r%1234567
+
+if _name_ == '_main_':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    t = int(input().strip())
+
+    for t_itr in range(t):
+        n = int(input().strip())
+
+        routes = list(map(int, input().rstrip().split()))
+
+        result = connectingTowns(n, routes)
+
+        fptr.write(str(result) + '\n')
+
+    fptr.close()
